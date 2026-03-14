@@ -1,3 +1,5 @@
+//This code is used to insert multiple data at once.
+
 public class DatabaseClassMethod{
     public static void Main(){
 
