@@ -57,7 +57,7 @@ public class SOQL {
         
         ----------------------------------------------------------------------------------------------
 
-        //View Delted from recycle bin
+        //View Deleted from recycle bin
                 List<Football_Player_c> playerList = [Select Id, name from Football_Player_c Where isDeleted = true ALL ROWS];
                     System.debug('playerList: '+playerList);
     

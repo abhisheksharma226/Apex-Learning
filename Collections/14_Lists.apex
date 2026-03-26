@@ -1,6 +1,7 @@
 NOTE - 
     * List can store duplicate values. List are Ordered.
     * Set can not store duplicate value. Set are Unordered.
+    * Map is a collection of key value pairs whre each unique key maps to a single value
 
     - Constructors in List
         1. Add into the List
