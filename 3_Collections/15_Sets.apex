@@ -109,7 +109,7 @@ System.debug(color2);
 -------------------------------------------------------------------------------------------------------------
         //Use Contain Method
                 Set<Integer> intSet = new Set<Integer>{1,2,6,4};
-				Boolean bool = intSet.contains(64);
+		Boolean bool = intSet.contains(64);
                 System.debug(bool);
 
 
