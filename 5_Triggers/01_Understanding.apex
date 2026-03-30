@@ -4,9 +4,17 @@
 //Types of Triggers: 7 Types
 
 // before insert -
-// before update -
-// before delete -
 // after insert -
+// before update -
 // after update -
+// before delete -
 // after delete
 // after undelete
+
+
+//1. Before Insert Trigger: 
+// This type of trigger executes before a new record is inserted into the database. It allows you to perform actions such as validating data, setting default values, or modifying field values before the record is saved. For example, you can use a before insert trigger to ensure that a required field is not left blank or to automatically populate a field based on other field values.
+
+//2.after Insert Trigger:
+// This type of trigger executes after a new record has been inserted into the database. It is commonly used to perform actions that require the record's ID, such as creating related records or sending notifications. For example, you can use an after insert trigger to create a related contact record when a new account is created or to send an email notification to the account owner.
+

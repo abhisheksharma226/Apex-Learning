@@ -4,8 +4,10 @@
 //Trigger.isInsert - to check if the trigger is executing on insert operation
 //Trigger.isBefore - to check if the trigger is executing before the DML operation  
 
-trigger AccountTrigger on Account (before insert, after insert) {
+trigger AccountTrigger on Account (before insert, after insert, before update) {
     
+
+    //For Insert
     if(Trigger.isInsert){
         if(Trigger.isBefore){
             AccountTrigerHandlerr.updateAccountWebsite(Trigger.new);
@@ -13,6 +15,29 @@ trigger AccountTrigger on Account (before insert, after insert) {
             AccountTrigerHandlerr.createRelatedContact(Trigger.new);
         }
     }
+
+
+    //For update
+    if(Trigger.isUpdate){
+        if(Trigger.isBefore){
+            AccountTrigerHandlerr.UpdateAccountField(Trigger.oldMap, Trigger.new);
+        }
+    }
+
+
+    //For delete
+     if(Trigger.isDelete){
+        if(Trigger.isBefore){
+            AccountTrigerHandlerr.preventAccountDeletion(Trigger.old);
+        }
+    }
+
+
+    //For undelete Or Restore
+    if(Trigger.isUndelete){
+        AccountTrigerHandlerr.updateUndeletedAccount(Trigger.new);
+    }
+    
     
     
     
